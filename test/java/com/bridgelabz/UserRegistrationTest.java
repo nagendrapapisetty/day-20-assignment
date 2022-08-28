@@ -18,7 +18,11 @@ public class UserRegistrationTest {
     @Test
     public void testEmail() throws UserRegistrationException {
         assertTrue(UserRegistration.email("nagendrapapisetty52@gamil.com"));
-        assertFalse(UserRegistration.email("nagendrapapisetty.u,123"));
-
+        assertFalse(UserRegistration.email("nagendrapapisetty.u,777"));
+    }
+    @Test
+    public void testPhoneNumber() throws UserRegistrationException {
+        assertFalse(UserRegistration.phoneNumber("917995976634"));
+        assertTrue(UserRegistration.phoneNumber("0 1234567890"));
     }
 }
